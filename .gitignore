@@ -1,0 +1,14 @@
+# Root-level ignores for cross-cutting junk. mobile/ and pc-client/
+# have their own .gitignore for stack-specific ignores (Flutter/Dart
+# build output, Python bytecode, etc.) -- this file only covers things
+# that can show up regardless of which subproject folder is opened.
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE folders, in case the repo root itself is opened as a
+# workspace instead of mobile/ or pc-client/ individually.
+.vscode/
+.idea/

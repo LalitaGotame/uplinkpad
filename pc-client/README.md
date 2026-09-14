@@ -37,10 +37,11 @@ Test tab. Press buttons / move the stick on the phone and confirm they
 register there.
 
 Find this PC's LAN IP with `ipconfig` (the "IPv4 Address" under your
-Wi-Fi adapter) and set it as `NetworkConfig.pcIpAddress` in
-`mobile/lib/config/network_config.dart` before running the phone app.
-Make sure Windows Firewall allows inbound UDP on port 9000 for
-Python, or packets will be silently dropped before reaching the
-script.
+Wi-Fi adapter). On the phone side, copy
+`mobile/lib/config/network_config.example.dart` to
+`network_config.dart` in that same folder and set `pcIpAddress` there
+(that file is gitignored — see `mobile/README.md`). Make sure Windows
+Firewall allows inbound UDP on port 9000 for Python, or packets will
+be silently dropped before reaching the script.
 
 Wire format: [`shared/protocol/packet_format.md`](../shared/protocol/packet_format.md).

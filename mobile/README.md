@@ -30,10 +30,17 @@ orientation on launch.
 
 ## Networking (Phase 2)
 
-Before running on a real device, set `NetworkConfig.pcIpAddress` in
-`lib/config/network_config.dart` to your PC's LAN IP (`ipconfig`,
-look for "IPv4 Address"), and start `pc-client/udp_listener.py` on
-that PC first. The phone and PC must be on the same Wi-Fi network.
-The status bar shows a running count of packets sent — that only
-means they left the phone, not that the PC received them; check the
-PC console for that.
+`lib/config/network_config.dart` holds your PC's LAN IP and is
+gitignored (it's machine-specific, not something to commit). Before
+running on a real device:
+
+```
+cp lib/config/network_config.example.dart lib/config/network_config.dart
+```
+
+Then edit `pcIpAddress` in the copy to your PC's LAN IP (`ipconfig`,
+look for "IPv4 Address"), and start `pc-client/gamepad_server.py` (or
+`udp_listener.py`) on that PC first. The phone and PC must be on the
+same Wi-Fi network. The status bar shows a running count of packets
+sent — that only means they left the phone, not that the PC received
+them; check the PC console for that.

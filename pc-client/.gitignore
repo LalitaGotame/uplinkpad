@@ -1,4 +1,11 @@
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
 venv/
+*.egg-info/
+.pytest_cache/
+
+# In case pc-client/ is opened standalone in an editor rather than
+# the repo root.
+.vscode/
+.idea/
