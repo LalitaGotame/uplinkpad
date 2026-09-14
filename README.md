@@ -15,8 +15,7 @@ no internet required.
 
 ## Status
 
-Phase 2: UDP send/receive skeleton, confirmed working end-to-end on
-real hardware (Android phone -> Windows PC over LAN Wi-Fi) — button
-presses, stick coordinates, and sequence numbers all arrive correctly
-in the PC console. No ViGEm yet. See `mobile/README.md` and
-`pc-client/README.md` to run both sides.
+Phase 3: `pc-client/gamepad_server.py` applies incoming UDP packets to
+a virtual Xbox 360 controller via ViGEmBus (`vgamepad`). Phase 2 (UDP
+send/receive) is confirmed working end-to-end on real hardware. See
+`mobile/README.md` and `pc-client/README.md` to run both sides.

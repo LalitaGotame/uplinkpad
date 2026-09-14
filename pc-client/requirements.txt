@@ -1,0 +1,4 @@
+# Pinned per docs/PROJECT_BRIEF.md: the underlying ViGEmBus driver is
+# archived/unmaintained upstream, so don't casually bump this without
+# re-testing against the driver version in the Phase 3 install notes.
+vgamepad==0.1.0

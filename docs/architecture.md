@@ -18,10 +18,13 @@ natively by Windows and games.
 
 1. **Static Flutter UI** (done) — D-pad, A/B/X/Y buttons, one
    analog stick, landscape layout. No networking.
-2. **UDP skeleton** (current) — `mobile/` sends JSON input packets
+2. **UDP skeleton** (done) — `mobile/` sends JSON input packets
    over UDP (`RawDatagramSocket`) to a hardcoded PC IP/port;
    `pc-client/udp_listener.py` prints what it receives. Protocol
    defined in `shared/protocol/packet_format.md`.
-3. `pc-client/` emulates an Xbox 360 controller via `vgamepad`.
+3. **ViGEm integration** (current) — `pc-client/gamepad_server.py`
+   applies incoming packets to a virtual Xbox 360 controller via
+   `vgamepad`/ViGEmBus. Verified against Windows' controller panel
+   before a real game.
 4. Real-game test.
 5. Polish: pairing, reconnect handling, latency tuning, multiple layouts.
