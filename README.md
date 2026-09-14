@@ -15,5 +15,8 @@ no internet required.
 
 ## Status
 
-Phase 1: static Flutter controller UI (D-pad, A/B/X/Y, one analog
-stick), no networking yet. See `mobile/README.md` to run it.
+Phase 2: UDP send/receive skeleton, confirmed working end-to-end on
+real hardware (Android phone -> Windows PC over LAN Wi-Fi) — button
+presses, stick coordinates, and sequence numbers all arrive correctly
+in the PC console. No ViGEm yet. See `mobile/README.md` and
+`pc-client/README.md` to run both sides.

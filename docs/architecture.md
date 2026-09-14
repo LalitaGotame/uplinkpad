@@ -16,10 +16,12 @@ natively by Windows and games.
 
 ## Phases
 
-1. **Static Flutter UI** (current) — D-pad, A/B/X/Y buttons, one
+1. **Static Flutter UI** (done) — D-pad, A/B/X/Y buttons, one
    analog stick, landscape layout. No networking.
-2. Wire up local input state/events within the app.
-3. UDP client in `mobile/`, matching UDP server in `pc-client/`,
-   protocol defined in `shared/`.
-4. `pc-client/` emulates an Xbox 360 controller via `vgamepad`.
-5. Polish: reconnect handling, latency tuning, multiple layouts.
+2. **UDP skeleton** (current) — `mobile/` sends JSON input packets
+   over UDP (`RawDatagramSocket`) to a hardcoded PC IP/port;
+   `pc-client/udp_listener.py` prints what it receives. Protocol
+   defined in `shared/protocol/packet_format.md`.
+3. `pc-client/` emulates an Xbox 360 controller via `vgamepad`.
+4. Real-game test.
+5. Polish: pairing, reconnect handling, latency tuning, multiple layouts.
